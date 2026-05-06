@@ -614,7 +614,7 @@
 		"retreat": 0.4
 	},
 	"armstil": {
-		"role": ["bomber", "air"],
+		"role": ["bomber", "air"]
 	},
 	"armliche": {
 		"role": ["bomber", "air"],
@@ -678,7 +678,7 @@
 	},
 	"armbats": {
 		"role": ["heavy"],
-		"attribute": ["assault"],
+		"attribute": ["assault"]
 	},
 	"armepoch": {
 		"role": ["heavy"],
@@ -776,7 +776,7 @@
 	"corsktl": {
 		"role": ["assault"],
 		"attribute": ["melee"],
-		"retreat": 0,
+		"retreat": 0
 	},
 	"corvoyr": {
 		"role": ["assault"],
@@ -941,7 +941,7 @@
 	},
 	"corbats": {
 		"role": ["heavy"],
-		"attribute": ["assault"],
+		"attribute": ["assault"]
 	},
 	"corblackhy": {
 		"role": ["heavy"],

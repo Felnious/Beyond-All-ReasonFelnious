@@ -8,27 +8,33 @@
 		"behaviour": {
 			"armmmkrt3": {
 				"role": ["static"],
-				"since": 1800
+				"since": 1800,
+				"fire_state": 3
 			},
 			"cormmkrt3": {
 				"role": ["static"],
-				"since": 1800
+				"since": 1800,
+				"fire_state": 3
 			},
 			"legmmkrt3": {
 				"role": ["static"],
-				"since": 1800
+				"since": 1800,
+				"fire_state": 3
 			},
 			"armafust3": {
 				"role": ["static"],
-				"since": 1800
+				"since": 1800,
+				"fire_state": 3
 			},
 			"corafust3": {
 				"role": ["static"],
-				"since": 1800
+				"since": 1800,
+				"fire_state": 3
 			},
 			"legadveconvt3": {
 				"role": ["static"],
-				"since": 1800
+				"since": 1800,
+				"fire_state": 3
 			}
 		}
 }

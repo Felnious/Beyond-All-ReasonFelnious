@@ -69,4 +69,22 @@ SArmorInfo InitArmordef()
 	return armor;
 }
 
+void EnableWallTargets()
+{
+	array<string> walls = {
+		"armdrag", "armfdrag", "armfort",
+		"cordrag", "corfdrag", "corfort",
+		"legdrag", "legfdrag", "legforti", "legrwall",
+		"armdrag_scav", "armfdrag_scav", "armfort_scav",
+		"cordrag_scav", "corfdrag_scav", "corfort_scav",
+		"corscavdrag", "corscavdrag_scav", "corscavfort", "corscavfort_scav"
+	};
+
+	for (uint i = 0; i < walls.length(); ++i) {
+		CCircuitDef@ cdef = ai.GetCircuitDef(walls[i]);
+		if (cdef !is null)
+			cdef.SetIgnore(false);
+	}
+}
+
 }  // namespace Init

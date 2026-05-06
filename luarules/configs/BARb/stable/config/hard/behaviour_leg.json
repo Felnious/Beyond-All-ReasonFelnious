@@ -80,7 +80,8 @@
 					"vs": {"artillery": 0.5, "assault": 0.8}
 				},
 				"power": 0.8,
-				"retreat": 0.6
+				"retreat": 0.6,
+				"fire_state": 3
 			},
 
 	// ============================================   Legion Ground Factories   =======================================0
@@ -516,16 +517,13 @@
 	
 	// Walls (Neutral BARbAI Refuse to Shoot (Only T2+T3 can break through Running over)) -- Needs a Revamp or a Rework to make non neutral
 			"legdrag": {
-				"role": ["static"],
-				"ignore": true
+				"role": ["static"]
 			},
 			"legfdrag": {
-				"role": ["static"],
-				"ignore": true
+				"role": ["static"]
 			},
 			"legforti": {
-				"role": ["static"],
-				"ignore": true
+				"role": ["static"]
 			},
 	
 	// ============================================   M O B I L E    U N I T S   =======================================0
@@ -672,7 +670,8 @@
 			"legcen": {
 				"role": ["assault"],
 				"threat":{"vs":{"artillery": 4.0, "anti-heavy":3.0}},
-				"limit": 40
+				"limit": 40,
+				"fire_state": 3
 			},
 			"legbal": {
 				"role": ["assault"],
@@ -681,316 +680,382 @@
 				"limit": 10,
 				"threat": {"air": 0.0, "water": 0.0, "surf": 0.8,
 					"vs": {"artillery": 1.8, "anti_air": 1.8, "raiders":0.5}
-				}
+				},
+				"fire_state": 3
 			},
 			"leglob": {
 				"role": ["skirmish"],
 				"threat": {"air": 0.0, "water": 0.0,
 					"vs": {"artillery": 2.0, "anti_air": 2.0}
-				}
+				},
+				"fire_state": 3
 			},
 			"legkark": {
 				"role": ["riot"],
 				"attribute": ["melee"],
 				"threat":{"air": 0.1, "water": 0.0,
 					"vs":{"artillery": 2.0, "anti_air": 2.0}
-				}
+				},
+				"fire_state": 3
 			},
 			"leggob": {
 				"role": ["raider"],
 				"attribute": ["scout"],
 				"threat": {"air": 0.0, "water": 0.0,
 					"vs": {"artillery":3.0, "anti_air": 2.0, "riot":0.5, "anti_heavy": 3.0, "anti_heavy_ass":3.0}
-				}
+				},
+				"fire_state": 3
 			},
 			"legaabot": {
 				"role": ["anti_air"],
 				"limit": 10,
-				"threat": {"air": 2.0, "water": 0.0, "surf":0.0}
+				"threat": {"air": 2.0, "water": 0.0, "surf":0.0},
+				"fire_state": 3
 			},
 			"legrezbot": {
 				"role": ["support"],
 				"retreat": 0.6,
-				"limit":60
+				"limit":60,
+				"fire_state": 3
 			},
 	
 			// adv bot - legalab
 	
 			"leginfestor": {
-				"role": ["support"]
+				"role": ["support"],
+				"fire_state": 3
 			},
 			"legstr": {
 				"role": ["raider"],
 				"attribute":["melee"],
 				"threat":{"vs":{"artillery": 4.0}},
-				"retreat": 0.85
+				"retreat": 0.85,
+				"fire_state": 3
 			},
 			"leginc": {
-				"role": ["heavy", "assault"]
+				"role": ["heavy", "assault"],
+				"fire_state": 3
 			},
 			"legshot": {
-				"role": ["riot"]
+				"role": ["riot"],
+				"fire_state": 3
 			},
 			"legbart": {
 				"role": ["artillery"],
 				"threat": {"surf":0.5, "vs":{"static":2.0, "artillery":2.0}},
 				"retreat": 0.8,
-				"limit": 10
+				"limit": 10,
+				"fire_state": 3
 			},
 			"legdecom": {
 				"role": ["builder"],
 				"buildspeed": 6.0,
-				"limit": 2
+				"limit": 2,
+				"fire_state": 3
 			},
 			"legsnapper": {
 				"role": ["scout"],
 				"attribute": ["melee"],
 				"retreat": 0,
-				"limit": 2
+				"limit": 2,
+				"fire_state": 3
 			},
 			"legsrail": {
-				"role": ["anti_heavy"]
+				"role": ["anti_heavy"],
+				"fire_state": 3
 			},
 			"leghrk": {
 				"role": ["artillery"],
 				"attribute":["siege"],
 				"threat": {"surf":0.5, "vs":{"static":2.0, "artillery":2.0}},
 				"retreat": 0.8,
-				"limit": 10
+				"limit": 10,
+				"fire_state": 3
 			},
 			"legamph": {
 				"role": ["raider"],
-				"limit": 10
+				"limit": 10,
+				"fire_state": 3
 			},
 			"legadvaabot": {
 				"role": ["anti_air"],
 				//"attribute": ["support"],
-				"limit": 10
+				"limit": 10,
+				"fire_state": 3
 			},
 
 			"legaspy": {
 				"role": ["scout"],
-				"limit": 3
+				"limit": 3,
+				"fire_state": 3
 			},
 
 			"legaradk": {
 				"role": ["support"],
 				"retreat": 0.6,
-				"limit": 3
+				"limit": 3,
+				"fire_state": 3
 			},
 			"legajamk": {
 				"role": ["support"],
-				"limit": 3
+				"limit": 3,
+				"fire_state": 3
 			},
 
 			// T3 LEGION EXPERIMENTAL - leggant
 			
 			"leegmech": {
 				"role": ["skirmish"],
-				"retreat": 0.6
+				"retreat": 0.6,
+				"fire_state": 3
 			},
 			"legkeres": {
 				"role": ["assault", "heavy"],
-				"retreat": 0.6
+				"retreat": 0.6,
+				"fire_state": 3
 			},
 			"legjav": {
-				"role": ["raider"]
+				"role": ["raider"],
+				"fire_state": 3
 			},
 			"legerailtank": {
 				"role": ["assault"],
-				"attribute": ["melee"]
+				"attribute": ["melee"],
+				"fire_state": 3
 			},
 			"legeshotgunmech": {
 				"role": ["riot"],
-				"attribute": ["melee"]
+				"attribute": ["melee"],
+				"fire_state": 3
 			},
 			"legeheatraymech": {
 				"role": ["heavy"],
 				"attribute": ["melee"],
-				"retreat": 0.00
+				"retreat": 0.00,
+				"fire_state": 3
 			},
 			"legelrpcmech": {
 				"role": ["artillery"],
 				//"attribute": ["siege", "support"],
-				"threat": {"air": 0.0, "water": 0.0}
+				"threat": {"air": 0.0, "water": 0.0},
+				"fire_state": 3
 			},
 			"legeallterrainmech": {
-				"role": ["skirmish", "heavy"]
+				"role": ["skirmish", "heavy"],
+				"fire_state": 3
 			},
 			"legehovertank": {
-				"role": ["raider"]
+				"role": ["raider"],
+				"fire_state": 3
 			},
 
 			// LEGION T1 VEHICLE - legvp
 	
 			"legscout": {
 				"role": ["scout"],
-				"threat":{"vs":{"artillery": 2.0}}
+				"threat":{"vs":{"artillery": 2.0}},
+				"fire_state": 3
 			},
 			"leghades": {
 				"role": ["raider"],
 				"attribute": ["scout"],
 				"threat":{"vs":{"artillery": 2.0}},
-				"limit": 30
+				"limit": 30,
+				"fire_state": 3
 			},
 			"legamphtank": {
-				"role": ["assault"]
+				"role": ["assault"],
+				"fire_state": 3
 			},
 			"leggat": {
 				"role": ["skirmish"],
-				"threat":{"vs":{"artillery": 2.0}}
+				"threat":{"vs":{"artillery": 2.0}},
+				"fire_state": 3
 			},
 			"leghelios": {
 				"role": ["raider"],
 				"threat":{"vs":{"artillery": 2.0}},
-				"retreat": 0.5
+				"retreat": 0.5,
+				"fire_state": 3
 			},
 			"legbar": {
 				"role": ["artillery"],
 				"attribute":["siege"],
-				"threat": {"surf": 0.2, "vs":{"static":5.0, "artillery":5.0}}
+				"threat": {"surf": 0.2, "vs":{"static":5.0, "artillery":5.0}},
+				"fire_state": 3
 			},
 			"legrail": {
 				"role": ["skirmish"],
-				"threat":{"vs":{"artillery": 2.0}}
+				"threat":{"vs":{"artillery": 2.0}},
+				"fire_state": 3
 			},
 	
 			// 	LEGION ADV VELICLE PLANT
 			
 			"legfloat": {
-				"role": ["raider"]
+				"role": ["raider"],
+				"fire_state": 3
 			},
 			"legaskirmtank": {
-				"role": ["skirmish"]
+				"role": ["skirmish"],
+				"fire_state": 3
 			},
 			"legmrv": {
-				"role": ["raider"]
+				"role": ["raider"],
+				"fire_state": 3
 			},
 			"legaheattank": {
 				"role": ["heavy"],
 				"attribute":["siege"],
-				"threat": {"surf": 1.5}
+				"threat": {"surf": 1.5},
+				"fire_state": 3
 			},
 			"legamcluster": {
 				"role": ["artillery"],
 				"attribute": ["siege"],
-				"retreat": 0.6
+				"retreat": 0.6,
+				"fire_state": 3
 			},
 			"legavroc": {
 				"role": ["artillery"],
-				"retreat": 0.6
+				"retreat": 0.6,
+				"fire_state": 3
 			},
 			"legmed": {
 				"role":	["assault"],
-				"retreat": 0.5
+				"retreat": 0.5,
+				"fire_state": 3
 			},
 			"legvcarry": {
 				"role":	["riot"],
-				"limit": 3
+				"limit": 3,
+				"fire_state": 3
 			},
 			"leginf": {
 				"role": ["artillery"],
 				"threat": {"surf": 0.2, "vs":{"static":5.0, "artillery":5.0}},
 				"retreat": 0.6,
-				"limit": 3
+				"limit": 3,
+				"fire_state": 3
 			},
 	
 			// aircraft - legap
 	
 			"legcib": {
 				"role": ["super", "air"],
-				"retreat": 0.8
+				"retreat": 0.8,
+				"fire_state": 3
 			},
 			"legfig": {
 				"role": ["anti_air", "air"],
 				"retreat": 0.5,
-				"power": 0.5
+				"power": 0.5,
+				"fire_state": 3
 			},
 			"legkam": {
 				"role": ["bomber", "air"],
 				"power": 0.5,
 				"limit": 30,
-				"retreat": 0.5
+				"retreat": 0.5,
+				"fire_state": 3
 			},
 			"legmos": {
 				"role": ["skirmish", "air"],
 				"threat": {"surf": 0.2},
 				"power": 0.1,
-				"retreat": 0.8
+				"retreat": 0.8,
+				"fire_state": 3
 			},
 			"leglts": {
 				"role": ["support", "air"],
-				"retreat": 0.5
+				"retreat": 0.5,
+				"fire_state": 3
 			},
 			"legatrans": {
 				"role": ["support", "air"],
-				"retreat": 0.5
+				"retreat": 0.5,
+				"fire_state": 3
 			},
 
 			// LEGION ADV AIRCRAFT aircraft - legaap
 	
 			"legwhisper": {
 				"role": ["scout", "air"],
-				"retreat": 0.6
+				"retreat": 0.6,
+				"fire_state": 3
 			},
 			"legafigdef": {
 				"role": ["anti_air", "air"],
-				"retreat": 0.5
+				"retreat": 0.5,
+				"fire_state": 3
 			},
 			"legvenator": {
 				"role": ["anti_air", "air"],
-				"retreat": 0.5
+				"retreat": 0.5,
+				"fire_state": 3
 			},
 			"legphoenix": {
 				"role": ["bomber", "air"],
-				"retreat": 0.8
+				"retreat": 0.8,
+				"fire_state": 3
 			},
 			"legnap": {
 				"role": ["bomber", "air"],
-				"retreat": 0.8
+				"retreat": 0.8,
+				"fire_state": 3
 			},
 			"legmineb": {
 				"role": ["bomber", "air"],
-				"retreat": 0.8
+				"retreat": 0.8,
+				"fire_state": 3
 			},
 			"legstronghold": {
 				"role": ["assault", "air"],
-				"retreat": 0.5
+				"retreat": 0.5,
+				"fire_state": 3
 			},
 			"legfort": {
 				"role": ["heavy", "air"],
-				"retreat": 0.4
+				"retreat": 0.4,
+				"fire_state": 3
 			},
 			"legatorpbomber": {
 				"role": ["anti_sub", "air"],
-				"retreat": 0.8
+				"retreat": 0.8,
+				"fire_state": 3
 			},
 	
 			// LEGION SEA PLATFORM aircraft - legsplab
 	
 			"legspradarsonarplane": {
 				"role": ["scout", "air"],
-				"attribute": ["rare"]
+				"attribute": ["rare"],
+				"fire_state": 3
 			},
 			"legspsurfacegunship": {
 				"role": ["skirmish", "air"],
-				"attribute": ["rare"]
+				"attribute": ["rare"],
+				"fire_state": 3
 			},
 			"legspbomber": {
 				"role": ["bomber", "air"],
-				"attribute": ["rare"]
+				"attribute": ["rare"],
+				"fire_state": 3
 			},
 			"legspcarrier": {
 				"role": ["assault", "air"],
-				"attribute": ["rare"]
+				"attribute": ["rare"],
+				"fire_state": 3
 			},
 			"legspfighter": {
 				"role": ["anti_air"],
-				"attribute": ["rare"]
+				"attribute": ["rare"],
+				"fire_state": 3
 			},
 			"legsptorpgunship": {
 				"role": ["anti_sub", "air"],
-				"attribute": ["rare"]
+				"attribute": ["rare"],
+				"fire_state": 3
 			},
 
 			// LEGION SEA
@@ -998,107 +1063,130 @@
 			"legnavyrezsub": {
 				"role": ["support"],
 				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"legnavyaaship": {
 				"role": ["anti_air", "raider"],
 				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"legnavyscout": {
 				"role": ["scout"],
 				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"legnavyfrigate": {
 				"role": ["assault", "air"],
 				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"legnavydestro": {
 				"role": ["skirmish", "air"],
 				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"legnavyartyship": {
 				"role": ["artillery"],
 				"attribute": ["support"],
 				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"legnavysub": {
 				"role": ["sub"],
 				"attribute": ["rare"],
 				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 	
 			// LEGION ADVANCED SEA.0
 
 			"leganavyantiswarm": {
 				"role": ["riot"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavycruiser": {
 				"role": ["assault"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavymissileship": {
 				"role": ["skirmish"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavybattleship": {
 				"role": ["assault"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavyartyship": {
 				"role": ["artillery"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavyflagship": {
 				"role": ["super"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavyaaship": {
 				"role": ["anti_air"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavyantinukecarrier": {
 				"role": ["support"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavyradjamship": {
 				"role": ["support"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavybattlesub": {
 				"role": ["raider"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 			"leganavyheavysub": {
 				"role": ["skirmish"],
-				"power": 1.0
+				"power": 1.0,
+				"fire_state": 3
 			},
 
 			// LEGION HOVERS
 	
 			"legsh": {
-				"role": ["raider"]
+				"role": ["raider"],
+				"fire_state": 3
 			},
 			"legner": {
-				"role": ["skirmish"]
+				"role": ["skirmish"],
+				"fire_state": 3
 			},
 			"legmh": {
 				"role": ["artillery"],
 				"threat": {"surf": 0.2, "vs":{"static":5.0, "artillery":5.0}},
-				"limit": 6
+				"limit": 6,
+				"fire_state": 3
 			},
 			"legah": {
 				"role": ["anti_air"],
-				"attribute":["support"]
+				"attribute":["support"],
+				"fire_state": 3
 			},
 			"legcar": {
-				"role": ["heavy", "skirmish"]
+				"role": ["heavy", "skirmish"],
+				"fire_state": 3
 			}
 		}
 	}

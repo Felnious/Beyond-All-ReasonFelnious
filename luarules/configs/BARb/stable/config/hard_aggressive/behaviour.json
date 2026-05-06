@@ -82,7 +82,8 @@
             	"vs": {"artillery": 0.5, "assault": 0.8}
 			},
 			"power": 0.8,
-			"retreat": 0.6
+			"retreat": 0.6,
+			"fire_state": 3
 		},
 		"corcom": {
 			"role": ["builder"],
@@ -96,8 +97,8 @@
             "vs": {"artillery": 0.5, "assault": 0.8}
 			},
 			"power": 0.8,
-       	 "retreat": 0.6
-        
+       	 	"retreat": 0.6,
+			"fire_state": 3
 		},
 
 
@@ -108,63 +109,72 @@
 		"armlab": {
 			"role": ["static"],
 			"build_speed": 5.0, //bp 100
-            "limit": 1
+            "limit": 1,
+			"fire_state": 3
 		},
 		"armalab": {
 			"role": ["static"],
 			"attribute": ["support"], //facory with support is build only in base
 			"limit": 1,
-			"build_speed": 15.0 //bp 300
+			"build_speed": 15.0, //bp 300,
+			"fire_state": 3
 		},
 		"armshltx": {
 			"role": ["static"],
 			"attribute": ["support"],
 			"midposoffset": [0, 0, -16],
 			"limit": 1,
-			"build_speed": 1.0 // bp 600
+			"build_speed": 1.0, // bp 600,
+			"fire_state": 3
 		},
 		"armvp": {
 			"role": ["static"],
 			"build_speed": 5.0, // bp 100
-            "limit": 1
+            "limit": 1,
+			"fire_state": 3
 		},
 		"armavp": {
 			"role": ["static"],
 			"attribute": ["support"],
 			"limit": 1,
-			"build_speed": 15.0 //bp 300
+			"build_speed": 15.0, //bp 300,
+			"fire_state": 3
 		},
 
 		"corlab": {
 			"role": ["static"],
 			"build_speed": 5.0,  //bp 100
             "limit": 1,
-			"midposoffset": [-3.239746, 0, -2]
+			"midposoffset": [-3.239746, 0, -2],
+			"fire_state": 3
 		},
 		"coralab": {
 			"role": ["static"],
 			"midposoffset": [0, 0, -4],
 			//"attribute": ["support"],
 			"limit": 1,
-			"build_speed": 15.0 // bp 300
+			"build_speed": 15.0, // bp 300,
+			"fire_state": 3
 		},
 		"corgant": {
 			"role": ["static"],
 			"attribute": ["support"],
 			"limit": 1,
-			"build_speed": 1.0 //bp 300
+			"build_speed": 1.0, //bp 300,
+			"fire_state": 3
 		},
 		"corvp": {
 			"role": ["builder"],
 			"build_speed": 5.0, // bp 100
-            "limit": 1
-
+            "limit": 1,
+			"fire_state": 3
 		},
 		"coravp": {
 			"role": ["static"],
 			"attribute": ["support"],
 			"limit": 1,
-			"build_speed": 15.0  //bp 300
+			"build_speed": 15.0, //bp 300,
+			"fire_state": 3
 		},
 
 // FACTORIES - air
@@ -172,120 +182,141 @@
 			"role": ["static"],
 			"attribute": ["support"],
 			"limit": 1,
-			"build_speed": 5 //bp 100
+			"build_speed": 5, //bp 100,
+			"fire_state": 3
 		},
 		"armaap": {
 			"role": ["static"],
 			"attribute": ["support"],
             "since": 420,
 			"limit": 1,
-			"build_speed": 10.0 //bp 200
+			"build_speed": 10.0, //bp 200,
+			"fire_state": 3
 		},
 		"corap": {
 			"role": ["static"],
 			"attribute": ["support"],
 			"limit": 1,
-			"build_speed": 5.0 //bp 100
+			"build_speed": 5.0, //bp 100,
+			"fire_state": 3
 		},
 		"coraap": {
 			"role": ["static"],
 			"attribute": ["support"],
             "since": 420,
 			"limit": 1,
-			"build_speed": 10.0 //bp 200
+			"build_speed": 10.0, //bp 200,
+			"fire_state": 3
 		},
 
 // FACTORIES - water
 		"armsy": {
 			"role": ["static"],
 			"build_speed": 8.0, // bp 165
-			"limit": 1
+			"limit": 1,
+			"fire_state": 3
 		},
 		"armasy": {
 			"role": ["static"],
 			"build_speed": 15.0, //bp 300
             //"since": 540,
-			"limit": 1
+			"limit": 1,
+			"fire_state": 3
 		},
 		"armhp": {
 			"role": ["static"],
 			"build_speed": 10.0, //bp 200
-			"limit": 1
+			"limit": 1,
+			"fire_state": 3
 		},
 		"armfhp": {
 			"role": ["static"],
 			"build_speed": 10.0,
-			"limit": 1
+			"limit": 1,
+			"fire_state": 3
 		},
         "armamsub": {
 			"role": ["static"],
 			"build_speed": 7.5, //bp 150
-			"limit": 1
+			"limit": 1,
+        	"fire_state": 3
         },
         "armplat": {
 			"role": ["static"],
 			"build_speed": 10.0, //200
 			"since": 420,
-			"limit": 1
+			"limit": 1,
+        	"fire_state": 3
         },
 		"armshltxuw": {
 			"role": ["static"],
 			"attribute": ["support"],
 			"midposoffset": [0, 0, -16],
 			"build_speed": 1.0, //bp 300
-			"limit": 1
+			"limit": 1,
+			"fire_state": 3
 		},
         "corsy": {
 			"role": ["static"],
 			"build_speed": 8.0, //bp 165
-			"limit": 1
+			"limit": 1,
+        	"fire_state": 3
 		},
 		"corasy": {
 			"role": ["static"],
 			"build_speed": 15.0,  //bp 300
             "since": 480,
-			"limit": 1
+			"limit": 1,
+			"fire_state": 3
 		},
 		"corhp": {
 			"role": ["static"],
 			"build_speed": 10.0, //bp 200
-			"limit": 1
+			"limit": 1,
+			"fire_state": 3
 		},
 		"corfhp": {
 			"role": ["static"],
 			"build_speed": 10.0, //bp 200
 			"since": 300,
-			"limit": 1
+			"limit": 1,
+			"fire_state": 3
 		},
         "coramsub": {
 			"role": ["builder"],
 			"build_speed": 7.5, //bp 150
-			"limit": 1
+			"limit": 1,
+        	"fire_state": 3
 		},
         "corplat": {
 			"role": ["builder"],
 			"build_speed": 10.0,  //bp 200
 			"since": 420,
-			"limit": 1
+			"limit": 1,
+        	"fire_state": 3
 		},
 
 
 // FACTORIES - Nanos
 		"armnanotc": {
 			"role": ["support"],		// nanos with role "support" are considered "low priority"
-			"build_speed": 10.0  // bp 200, lower values => more and earlier nanos (workaround) 
+			"build_speed": 10.0, // bp 200, lower values => more and earlier nanos (workaround) ,
+			"fire_state": 3
 		},
 		"armnanotcplat": {
 			"role": ["support"],
-			"build_speed": 10.0  //lower values => more and earlier nanos (workaround) 
+			"build_speed": 10.0, //lower values => more and earlier nanos (workaround) ,
+			"fire_state": 3
 		},
 		"cornanotc": {
 			"role": ["static"],
-			"build_speed": 10.0 
+			"build_speed": 10.0 ,
+			"fire_state": 3
 		},
 		"cornanotcplat": {
 			"role": ["static"],
-			"build_speed": 10.0 
+			"build_speed": 10.0 ,
+			"fire_state": 3
 		},
 
 // DEFENSE - Armada
@@ -300,7 +331,8 @@
                 "vs": {"artillery": 0.3, "assault": 0.8, "raider":1.3}
             },
             "power": 1.0,
-			"build_mod": 400		
+			"build_mod": 400		,
+			"fire_state": 3
 		},
 		"armbeamer": {
 			"role": ["static"],
@@ -312,7 +344,8 @@
 				"default": 1.0,
 				"vs": {"artillery": 0.3, "assault": 0.8}
 			},
-			"power": 1.0	
+			"power": 1.0	,
+			"fire_state": 3
 		},
 		"armhlt": {
 			"role": ["static"],
@@ -320,12 +353,14 @@
 				"air": 0.2, 
 				"water":0.1,
 				"vs": {"artillery": 0.5}
-			}
+			},
+			"fire_state": 3
 		},
         "armfhlt": {
 			"role": ["static"],
             "since": 360,
-            "limit": 3	
+            "limit": 3	,
+        	"fire_state": 3
 		},
 		"armguard": {
 			"role": ["static"],
@@ -334,7 +369,8 @@
 				"vs":{"raider": 0.5, "assault": 0.5, "skirmish": 0.5}
 			},
             "since": 600,
-			"limit": 3
+			"limit": 3,
+			"fire_state": 3
 		},
 		"armclaw": {
 			"role": ["static"],
@@ -344,68 +380,82 @@
 				"water": 0.0,
 				"surf": 1.5, 
 				"vs": {"assault": 0.7}
-			}
+			},
+			"fire_state": 3
 		},
 		"armpb": {
 			"role": ["static"],
 			"threat": {"air":0.1, "surf":1.5, "water":1.0, 
 				"vs": {"artillery":0.5, "assault": 0.8}
-			}
+			},
+			"fire_state": 3
 		},
 		"armamb": {
 			"role": ["static"],
 			"on": false,
 			"threat": {"air":0.0, "surf":1.0, "water":1.0, 
 				"vs": {"artillery":0.6, "assault": 0.8, "raiders":0.8}
-			}
+			},
+			"fire_state": 3
 		},
 		"armanni": {
 			"role": ["static"],
 			"threat": {"air":0.0, "surf":0.5, "water":0.1, 
 				"vs": {"scout":0.1, "raider":0.1, "heavy": 2.0, "super":2.0}
-			}
+			},
+			"fire_state": 3
 		},
 		"armbrtha": {
-			"role": ["static"]
+			"role": ["static"],
+			"fire_state": 3
 		},
         "armsilo":{
 			"role":	["super", "static"],
             "threat":{"air": 0.0, "water": 0.0, "surf": 0.1},
-			"limit": 1
+			"limit": 1,
+        	"fire_state": 3
         },
 
 		"armrl": {
 			"role": ["anti_air"],
-			"threat":{"air":3.0, "surf":0.0, "water":0.0}
+			"threat":{"air":3.0, "surf":0.0, "water":0.0},
+			"fire_state": 3
 		},
 		"armferret": {
 			"role": ["anti_air"],
-			"threat": {"air":3.0, "surf":0.0, "water":0.0}
+			"threat": {"air":3.0, "surf":0.0, "water":0.0},
+			"fire_state": 3
 		},
 		"armcir": {
 			"role": ["anti_air"],
-			"threat": {"air":3.0, "surf":0.0, "water":0.0}
+			"threat": {"air":3.0, "surf":0.0, "water":0.0},
+			"fire_state": 3
 		},
 		"armflak": {
 			"role": ["anti_air"],
-			"threat": {"air":4.0, "surf":0.0, "water":0.0}
+			"threat": {"air":4.0, "surf":0.0, "water":0.0},
+			"fire_state": 3
 		},
 		"armmercury": {
 			"role": ["anti_air"],
-			"threat": {"air":2.0, "surf":0.0, "water":0.0}
+			"threat": {"air":2.0, "surf":0.0, "water":0.0},
+			"fire_state": 3
 		},
 
 		"armtl": {
 			"role": ["static"],
-			"threat": {"air":0.0, "surf":1.0, "water":1.0, "vs": {"comm": 10}}  //problem with surf units staying on surf here (as for all other torpedo launchers) cause they cant be hit by them  
+			"threat": {"air":0.0, "surf":1.0, "water":1.0, "vs": {"comm": 10}}, //problem with surf units staying on surf here (as for all other torpedo launchers) cause they cant be hit by them  ,
+			"fire_state": 3
 		},
 		"armatl": {
 			"role": ["static"],
-			"threat": {"air":0.0, "surf":1.0, "water":1.0}
+			"threat": {"air":0.0, "surf":1.0, "water":1.0},
+			"fire_state": 3
 		},
 		"armkraken": {
 			"role": ["static"],
-			"threat": {"air":0.0, "surf":1.0, "water":1.0}
+			"threat": {"air":0.0, "surf":1.0, "water":1.0},
+			"fire_state": 3
 		},
 		
 // DEFENSE - Cortex
@@ -420,7 +470,8 @@
 				"water": 0.1, 
 				"default": 1.0,
 				"vs": {"artillery": 0.3, "assault": 0.8, "raider": 1.3}
-			}
+			},
+			"fire_state": 3
 		},
 		"corhllt": {
 			"role": ["static"],
@@ -430,7 +481,8 @@
 				"water": 0.1, 
 				"default": 1.0,
 				"vs": {"artillery": 0.3, "assault": 0.8}
-			}
+			},
+			"fire_state": 3
 		},
 		"corhlt": {
 			"role": ["static"],
@@ -438,12 +490,14 @@
 				"air": 0.2,  
 				"water": 0.1, 
 				"vs": {"artillery": 0.5, "assault": 0.8}
-			}
+			},
+			"fire_state": 3
 		},
 		"corfhlt": {
 			"role": ["static"],
 			"since": 360,
-			"limit": 3
+			"limit": 3,
+			"fire_state": 3
 		},
 		
 		"cormaw": {
@@ -454,67 +508,82 @@
 				"water": 0.0,
 				"surf": 1.5, 
 				"vs": {"assault": 0.7}
-			}
+			},
+			"fire_state": 3
 		},
 		"corpun": {
 			"role": ["static"],
 			"on": false,
 			"threat": {"air": 0.0, "water": 0.1,"surf": 0.5},
             "since": 600,
-			"limit": 3
+			"limit": 3,
+			"fire_state": 3
 		},
 		"corrl": {
 			"role": ["anti_air"],
-			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0}
+			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0},
+			"fire_state": 3
 		},
 		"cormadsam": {
 			"role": ["anti_air"],
-			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0}
+			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0},
+			"fire_state": 3
 		},
 		"corerad": {
 			"role": ["anti_air"],
-			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0}
+			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0},
+			"fire_state": 3
 		},
 		"corflak": {
 			"role": ["anti_air"],
-			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0}
+			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0},
+			"fire_state": 3
 		},
 		"corscreamer": {
 			"role": ["anti_air"],
-			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0}
+			"threat": {"air": 2.0, "water": 0.0,"surf": 0.0},
+			"fire_state": 3
 		},
 		"cortl": {
 			"role": ["static"],
-			"threat": {"air": 0.0, "water": 1.0,"surf": 2.0, "vs": {"comm": 10}}
+			"threat": {"air": 0.0, "water": 1.0,"surf": 2.0, "vs": {"comm": 10}},
+			"fire_state": 3
 		},
 		"coratl": {
 			"role": ["static"],
-			"threat": {"air": 0.0, "water": 1.0,"surf": 2.0}
+			"threat": {"air": 0.0, "water": 1.0,"surf": 2.0},
+			"fire_state": 3
 		},
 		"corvipe": {
-			"role": ["static"]
+			"role": ["static"],
+			"fire_state": 3
 		},
 		"cortoast": {
 			"role": ["static"],
 			"on": false,
-			"threat": {"air": 0.0, "water": 0.1,"surf": 1.0}
+			"threat": {"air": 0.0, "water": 0.1,"surf": 1.0},
+			"fire_state": 3
 		},
 		"cordoom": {
 			"role": ["static"],
-			"threat": {"air":0.0, "surf":1.0, "water":0.1, "vs": {"scout":0.4, "raider":0.4, "artillery":0.3, "anti_heavy":0.5, "anti_heavy_ass":0.5, "super":0.8}}
+			"threat": {"air":0.0, "surf":1.0, "water":0.1, "vs": {"scout":0.4, "raider":0.4, "artillery":0.3, "anti_heavy":0.5, "anti_heavy_ass":0.5, "super":0.8}},
+			"fire_state": 3
         },
         "corfdoom": {
             "role": ["static"],
-			"threat": {"air":0.0, "surf":1.0, "water":0.1, "vs": {"scout":0.4, "raider":0.4, "artillery":0.3, "anti_heavy":0.5, "anti_heavy_ass":0.5, "super":0.8}}
+			"threat": {"air":0.0, "surf":1.0, "water":0.1, "vs": {"scout":0.4, "raider":0.4, "artillery":0.3, "anti_heavy":0.5, "anti_heavy_ass":0.5, "super":0.8}},
+        	"fire_state": 3
 		},
         "corjuno":{
 			"role":["super", "static"],
-			"since": 900
+			"since": 900,
+        	"fire_state": 3
 		},
         "corsilo":{
 			"role":	["super", "static"],
             "threat":{"air": 0.0, "water": 0.0, "surf": 0.1},
-			"limit": 1
+			"limit": 1,
+        	"fire_state": 3
         },
 
 
@@ -523,61 +592,66 @@
 // BUILDINGS
 		"armtarg": {
 			"role": ["static"],
-			"limit": 3
+			"limit": 3,
+			"fire_state": 3
 		},
 		"cortarg": {
 			"role": ["static"],
-			"limit": 3
+			"limit": 3,
+			"fire_state": 3
 		},
 		"armemp":{
-			"role":	["super", "static"] //without "super" it does not shoot
+			"role":	["super", "static"], //without "super" it does not shoot,
+			"fire_state": 3
 		},
 		"cortron":{
 			"role":	["super", "static"],
-			"limit":1
+			"limit":1,
+			"fire_state": 3
 		},
 		"armveil":{
-			"role": ["static"]
+			"role": ["static"],
+			"fire_state": 3
 		},
 		"corshroud":{
-			"role":["static"]
+			"role":["static"],
+			"fire_state": 3
 		},
 		"armrad": {
 			"role": ["static"],
-			"since": 120
+			"since": 120,
+			"fire_state": 3
 		},
 		"corrad":{
 			"role":["static"],
-			"since": 120
+			"since": 120,
+			"fire_state": 3
 		},
 		"armjamt":{
 			"role":["static"],
-			"since": 600
+			"since": 600,
+			"fire_state": 3
 		},
 		"corjamt":{
 			"role":["static"],
-			"since": 600
+			"since": 600,
+			"fire_state": 3
 		},
 		"armjuno":{
 			"role":["super", "static"],
-			"since": 900
+			"since": 900,
+			"fire_state": 3
 		},
 
 		"armmakr": {
 			"role": ["static"],
-			"since": 300
+			"since": 300,
+			"fire_state": 3
 		},
 		"cormakr": {
 			"role": ["static"],
-			"since": 300
-		},
-		"armdrag": {
-			"role": ["static"],
-			"ignore": true
-		},
-		"cordrag": {
-			"role": ["static"],
-			"ignore": true
+			"since": 300,
+			"fire_state": 3
 		},
 
 	                  
@@ -596,7 +670,8 @@
         },
 		"armgeo": {
 			"role": ["static"],
-			"midposoffset": [0, 0, -2]
+			"midposoffset": [0, 0, -2],
+			"fire_state": 3
 		},
         "armfus" : {
             "role": ["static"],
@@ -679,37 +754,45 @@
 
 
 // ignore
+		"armdrag": {
+			"role": ["static"],
+			"fire_state": 3
+		},
+		"cordrag": {
+			"role": ["static"],
+			"fire_state": 3
+		},
 		"armfort": {
 			"role": ["static"],
-			"ignore": true
+			"fire_state": 3
 		},
 		"corfort": {
 			"role": ["static"],
-			"ignore": true
+			"fire_state": 3
 		},
 		"armdrag_scav": {
 			"role": ["static"],
-			"ignore": true
+			"fire_state": 3
 		},
 		"cordrag_scav": {
 			"role": ["static"],
-			"ignore": true
+			"fire_state": 3
 		},
 		"armfort_scav": {
 			"role": ["static"],
-			"ignore": true
+			"fire_state": 3
 		},
 		"corfort_scav": {
 			"role": ["static"],
-			"ignore": true
+			"fire_state": 3
 		},
 		"corscavdrag": {
 			"role": ["static"],
-			"ignore": true
+			"fire_state": 3
 		},
 		"corscavdrag_scav": {
 			"role": ["static"],
-			"ignore": true
+			"fire_state": 3
 		},
 
 // ============================================   M O B I L E    U N I T S   =======================================0
