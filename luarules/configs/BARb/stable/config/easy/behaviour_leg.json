@@ -129,7 +129,6 @@
 			},
 			"legjuno":{
 				"role":["super", "static"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 			 	"power": 1.0,
 				"since": 900,
 				"fire_state": 3
@@ -168,7 +167,6 @@
 			},
 			"leglupara": {
 				"role": ["anti_air"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 				"fire_state": 3
 			},
 
@@ -198,6 +196,7 @@
 			},
 			"legrwall": {
 				"role": ["static"],
+				"power": 1.0,
 				"fire_state": 3
 			},
 			"legbombard": {
@@ -257,19 +256,16 @@
 			},
 			"legfrad": {
 				"role": ["static"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 			 	"power": 1.0,
 				"fire_state": 3
 			},
 			"legctl": {
 				"role": ["static"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 			 	"power": 1.0,
 				"fire_state": 3
 			},
 			"legfmg": {
 				"role": ["static"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 			 	"power": 1.0, 
 				"since": 360,
 				"limit": 3,
@@ -277,13 +273,11 @@
 			},
 			"legfrl": {
 				"role": ["anti_air"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 				"power": 1.0,
 				"fire_state": 3
 			},
 			"legtl": {
 				"role": ["static"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 			 	"power": 1.0,
 				"fire_state": 3
 			},
@@ -436,13 +430,16 @@
 
 	// Walls (Neutral BARbAI Refuse to Shoot (Only T2+T3 can break through Running over)) -- Needs a Revamp or a Rework to make non neutral
 			"legdrag": {
-				"role": ["static"]
+				"role": ["static"],
+				"power": 1.0
 			},
 			"legfdrag": {
-				"role": ["static"]
+				"role": ["static"],
+				"power": 1.0
 			},
 			"legforti": {
-				"role": ["static"]
+				"role": ["static"],
+				"power": 1.0
 			},
 	
 	// ============================================   M O B I L E    U N I T S   =======================================0
@@ -889,45 +886,38 @@
 			"legnavyrezsub": {
 				"role": ["support"],
 				"attribute": ["rare"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 				"power": 1.0,
 				"fire_state": 3
 			},
 			"legnavyaaship": {
 				"role": ["scout", "anti_air", "raider"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 				"power": 1.0,
 				"fire_state": 3
 			},
 			"legnavyscout": {
 				"role": ["scout"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 				"power": 1.0,
 				"fire_state": 3
 			},
 			"legnavyfrigate": {
 				"role": ["assault", "air"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 				"power": 1.0,
 				"fire_state": 3
 			},
 			"legnavydestro": {
 				"role": ["skirmish", "air"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 				"power": 1.0,
 				"fire_state": 3
 			},
 			"legnavyartyship": {
 				"role": ["artillery"],
 				"attribute": ["support"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 				"power": 1.0,
 				"fire_state": 3
 			},
 			"legnavysub": {
 				"role": ["sub"],
 				"attribute": ["anti_sub"],
-				"threat": {"air": 0.0, "surf": 0.0, "water": 0.0, "default": 0.0},
 				"power": 1.0,
 				"fire_state": 3
 			},

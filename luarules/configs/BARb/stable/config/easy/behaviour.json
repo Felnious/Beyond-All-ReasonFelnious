@@ -105,21 +105,6 @@
 		// Ally threat multiplier
 //		"power": 1.0,
 		// Enemy threat multiplier
-//		"threat": 1.0,
-//		"threat": {
-//			"air": 0.2,
-//			"surf": 1.0,  // surface, also on water
-//			"water": 0.5,  // underwater
-//			"default": 0.9,  // for vs
-//			"vs": {
-//				"builder": 1.0,
-//				"scout": 1.0,
-//				"raider": 0.8,
-//				"assault": 0.1,
-//				"riot": 0.5,
-//				"skirmish": 0.5
-//			}
-//		},
 
 		// Ignore enemy
 //		"ignore": false,
@@ -163,7 +148,6 @@
 	"armguard": {
 		"role": ["static"],
 		"attribute": ["artillery"],
-		"threat": 0.3,
 		"fire_state": 3
 	},
 	"armclaw": {
@@ -236,7 +220,6 @@
 	"corpun": {
 		"role": ["static"],
 		"attribute": ["artillery"],
-		"threat": 0.3,
 		"fire_state": 3
 	},
 	"corrl": {
@@ -695,7 +678,6 @@
 	},
 	"armthund": {
 		"role": ["bomber", "air"],
-		"threat": 0.1,
 		"fire_state": 3
 	},
 	"armkam": {
@@ -1201,7 +1183,6 @@
 	},
 	"corshad": {
 		"role": ["bomber", "air"],
-		"threat": 0.1,
 		"fire_state": 3
 	},
 	"corbw": {
@@ -1247,34 +1228,42 @@
 	// ignore
 	"armdrag": {
 		"role": ["static"],
+		"power": 1.0,
 		"fire_state": 3
 	},
 	"cordrag": {
 		"role": ["static"],
+		"power": 1.0,
 		"fire_state": 3
 	},
 	"armfort": {
 		"role": ["static"],
+		"power": 1.0,
 		"fire_state": 3
 	},
 	"corfort": {
 		"role": ["static"],
+		"power": 1.0,
 		"fire_state": 3
 	},
 	"armdrag_scav": {
 		"role": ["static"],
+		"power": 1.0,
 		"fire_state": 3
 	},
 	"cordrag_scav": {
 		"role": ["static"],
+		"power": 1.0,
 		"fire_state": 3
 	},
 	"armfort_scav": {
 		"role": ["static"],
+		"power": 1.0,
 		"fire_state": 3
 	},
 	"corfort_scav": {
 		"role": ["static"],
+		"power": 1.0,
 		"fire_state": 3
 	},
 

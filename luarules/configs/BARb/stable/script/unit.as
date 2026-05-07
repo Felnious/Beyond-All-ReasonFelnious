@@ -34,6 +34,11 @@ TypeMask ROLE8    = AiAddRole("role8",           ASSAULT.type);
 TypeMask REZZER   = AiAddRole("rezzer",          SUPPORT.type);
 TypeMask AHA      = AiAddRole("anti_heavy_ass",  SUPPORT.type);
 TypeMask BUILDER2 = AiAddRole("builderT2",       BUILDER.type);
+TypeMask ANTI_NUKE = AiAddRole("anti_nuke",      STATIC.type);
+TypeMask JAMMER    = AiAddRole("jammer",         STATIC.type);
+TypeMask RADAR     = AiAddRole("radar",          STATIC.type);
+TypeMask JUNO      = AiAddRole("juno",           STATIC.type);
+TypeMask SPAM      = AiAddRole("spam",           SCOUT.type);
 }  // namespace Role
 
 namespace Attr {
@@ -91,4 +96,5 @@ Type COMM    = Unit::Role::COMM.type;
 // Custom roles
 Type AHA      = Unit::Role::AHA.type;
 Type BUILDER2 = Unit::Role::BUILDER2.type;
+Type SPAM     = Unit::Role::SPAM.type;
 }  // namespace RT

@@ -35,6 +35,7 @@ void AiMain()  // Initialize config params
 
 void AiUpdate()  // SlowUpdate, every 30 frames with initial offset of skirmishAIId
 {
+	Init::EnableLateGameIgnoreForSmallT1();
 }
 
 }  // namespace Main

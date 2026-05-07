@@ -99,21 +99,6 @@
 		// Ally threat multiplier
 //		"power": 1.0,
 		// Enemy threat multiplier
-//		"threat": 1.0,
-//		"threat": {
-//			"air": 0.2,
-//			"surf": 1.0,  // surface, also on water
-//			"water": 0.5,  // underwater
-//			"default": 0.9,  // for vs
-//			"vs": {
-//				"builder": 1.0,
-//				"scout": 1.0,
-//				"raider": 0.8,
-//				"assault": 0.1,
-//				"riot": 0.5,
-//				"skirmish": 0.5
-//			}
-//		},
 
 		// Ignore enemy
 //		"ignore": false,
@@ -152,8 +137,7 @@
 	"armguard": {
 		"role": ["static"],
 		"attribute": ["artillery"],
-		"on": false,
-		"threat": 0.3
+		"on": false
 	},
 	"armclaw": {
 		"role": ["static"]
@@ -211,8 +195,7 @@
 	"corpun": {
 		"role": ["static"],
 		"attribute": ["artillery"],
-		"on": false,
-		"threat": 0.3
+		"on": false
 	},
 	"corrl": {
 		"role": ["anti_air"]
@@ -579,8 +562,7 @@
 		"attribute": ["scout"]
 	},
 	"armthund": {
-		"role": ["bomber", "air"],
-		"threat": 0.1
+		"role": ["bomber", "air"]
 	},
 	"armkam": {
 		"role": ["raider", "air"],
@@ -988,8 +970,7 @@
 		"attribute": ["scout"]
 	},
 	"corshad": {
-		"role": ["bomber", "air"],
-		"threat": 0.1
+		"role": ["bomber", "air"]
 	},
 	"corbw": {
 		"role": ["assault", "air"],
@@ -1027,67 +1008,67 @@
 	// ignore
 	"armdrag": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"cordrag": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"armfort": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"corfort": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"armdrag_scav": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"cordrag_scav": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"armfort_scav": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"corfort_scav": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"corscavdrag": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"corscavdrag_scav": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"corscavfort": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"corscavfort_scav": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"armfdrag": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"armfdrag_scav": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"corfdrag": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 	"corfdrag_scav": {
 		"role": ["static"],
-		"ignore": true
+		"power": 1.0
 	},
 
 	// FIXME: temporary factory buildSpeed

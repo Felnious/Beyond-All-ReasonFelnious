@@ -92,6 +92,7 @@
 				[ 
 					//{"unit": "legapopupdef", "category": "defence", "offset": [200, 0], "condition": {"chance": 0.5}},
 					{"unit": "legrhapsis", "category": "defence", "offset": [-80, 80], "condition": {"air": true}},
+					{"unit": "legcluster", "category": "defence", "offset": {"front": 140}, "condition": {"air": true, "chance": 0.5}},
 					{"unit": "legnanotc", "category": "defence", "offset": {"front": 100}},
 					{"unit": "legsilo", "category": "defence", "offset": [200, 0], "condition": {"chance": 0.2}}
 				]
@@ -105,7 +106,8 @@
 //					{"unit": "legadveconv", "category": "convert", "offset": [120, 150]},
 //					{"unit": "legadveconv", "category": "convert", "offset": [150, 150]},
 //					{"unit": "legadveconv", "category": "convert", "offset": [120, -120]},
-					{"unit": "legrhapsis", "category": "defence", "offset": [-80, 80], "condition": {"air": true}}
+					{"unit": "legrhapsis", "category": "defence", "offset": [-80, 80], "condition": {"air": true}},
+					{"unit": "legcluster", "category": "defence", "offset": {"front": 140}, "condition": {"air": true, "chance": 0.5}}
 				]
 			]
 		},
@@ -148,12 +150,12 @@
 		"legalab": {
 			"hub": [
 					//[{"unit": "legarad", "category": "defence", "offset": {"back": 100}, "priority": "normal"}],
-					[{"unit": "legacluster", "category": "defence", "offset": {"front": 100}, "priority": "low"}] 
+					[{"unit": "legacluster", "category": "defence", "offset": {"front": 100}, "priority": "normal", "condition": {"air": true}}] 
 		]
 		},
 		"legavp": {
 			"hub": [
-				[{"unit": "legacluster", "category": "defence", "offset": {"front": 100}, "priority": "low"}]
+				[{"unit": "legacluster", "category": "defence", "offset": {"front": 100}, "priority": "normal", "condition": {"air": true}}]
 			]
 		},
 		"legadvshipyard": {

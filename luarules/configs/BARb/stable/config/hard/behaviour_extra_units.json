@@ -11,6 +11,7 @@
 
 			"armmeatball": {
 				"role": ["artillery"],
+
 				"attribute": ["melee"],
 				"retreat": 0.0,
 				"power": 5.0,

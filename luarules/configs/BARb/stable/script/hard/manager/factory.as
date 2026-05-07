@@ -72,16 +72,6 @@ void AiUnitAdded(CCircuitUnit@ unit, Unit::UseAs usage)
 		return;
 
 	const CCircuitDef@ facDef = unit.circuitDef;
-	if (userData[facDef.id].attr & Attr::T3 != 0) {
-		// if (ai.teamId != ai.GetLeadTeamId()) then this change affects only target selection,
-		// while threatmap still counts "ignored" here units.
-		array<string> spam = {"armpw", "corak", "armflea", "armfav", "corfav", "leggob", "legscout"};
-		for (uint i = 0; i < spam.length(); ++i) {
-			CCircuitDef@ cdef = ai.GetCircuitDef(spam[i]);
-			if (cdef !is null)
-				cdef.SetIgnore(true);
-		}
-	}
 
 	const array<Opener::SO>@ opener = Opener::GetOpener(facDef);
 	if (opener is null)
@@ -139,10 +129,53 @@ bool AiIsSwitchAllowed(CCircuitDef@ facDef)
 
 CCircuitDef@ AiGetFactoryToBuild(const AIFloat3& in pos, bool isStart, bool isReset)
 {
-	return aiFactoryMgr.DefaultGetFactoryToBuild(pos, isStart, isReset);
+	CCircuitDef@ buildDef = aiFactoryMgr.DefaultGetFactoryToBuild(pos, isStart, isReset);
+	if ((buildDef !is null) && !IsLeadAirTeam() && IsAirFactoryDef(buildDef)) {
+		CCircuitDef@ fallback = GetNonAirFactoryFallback(buildDef);
+		if ((fallback !is null) && fallback.IsAvailable(ai.frame))
+			return fallback;
+	}
+	return buildDef;
 }
 
 /* --- Utils --- */
+
+bool IsLeadAirTeam()
+{
+	return ai.teamId == ai.GetLeadTeamId();
+}
+
+bool IsAirFactoryDef(const CCircuitDef@ facDef)
+{
+	if (facDef is null)
+		return false;
+
+	const string name = facDef.GetName();
+	return (name == armap) || (name == armaap)
+		|| (name == corap) || (name == coraap)
+		|| (name == legap) || (name == legaap);
+}
+
+CCircuitDef@ GetNonAirFactoryFallback(const CCircuitDef@ facDef)
+{
+	const string name = facDef.GetName();
+	string fallbackName;
+	if (name == armap) {
+		fallbackName = armvp;
+	} else if (name == armaap) {
+		fallbackName = armavp;
+	} else if (name == corap) {
+		fallbackName = corvp;
+	} else if (name == coraap) {
+		fallbackName = coravp;
+	} else if (name == legap) {
+		fallbackName = legvp;
+	} else if (name == legaap) {
+		fallbackName = legavp;
+	}
+
+	return (fallbackName.length() > 0) ? ai.GetCircuitDef(fallbackName) : null;
+}
 
 float MakeSwitchLimit()
 {

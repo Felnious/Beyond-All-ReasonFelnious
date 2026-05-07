@@ -132,6 +132,13 @@
 		"max_percent": 0.8,
 		"eps_step": 0.00
 	},
+	"juno": {
+		"vs":         ["jammer", "radar"],
+		"ratio":      [ 0.10,     0.10],
+		"importance": [ 100.00,   100.00],
+		"max_percent": 0.3,
+		"eps_step": 0.00
+	},
     "builderT2": {
         "vs":        ["skirmish",  "heavy", "super"],
         "ratio":      [ 1.00,     1.00,		0.10],
@@ -144,6 +151,13 @@
 		"ratio":      [ 0.10,        0.10],
 		"importance": [ 2.00,       2.00],
 		"max_percent": 0.20,
+		"eps_step": 0.00
+	},
+	"jammer": {
+		"vs":         ["radar"],
+		"ratio":      [ 0.10],
+		"importance": [ 100.00],
+		"max_percent": 0.3,
 		"eps_step": 0.00
 	}
 }
