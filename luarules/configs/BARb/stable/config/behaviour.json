@@ -1007,68 +1007,52 @@
 
 	// ignore
 	"armdrag": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"cordrag": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"armfort": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"corfort": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"armdrag_scav": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"cordrag_scav": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"armfort_scav": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"corfort_scav": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"corscavdrag": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"corscavdrag_scav": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"corscavfort": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"corscavfort_scav": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"armfdrag": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"armfdrag_scav": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"corfdrag": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 	"corfdrag_scav": {
-		"role": ["static"],
-		"power": 1.0
+		"role": ["static"]
 	},
 
 	// FIXME: temporary factory buildSpeed
