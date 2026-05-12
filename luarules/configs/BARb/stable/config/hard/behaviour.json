@@ -505,6 +505,7 @@
 		},
 		"armemp":{
 			"role":	["super", "static"], //without "super" it does not shoot,
+			"limit": 1,
 			"fire_state": 2
 		},
 		"cortron":{
