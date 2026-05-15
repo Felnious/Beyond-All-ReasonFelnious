@@ -7,40 +7,40 @@
 
 	"quota": {
 		"scout": 2,  // max scout units out of raiders
-		"raid": [6.0, 150.0],  // [<min>, <avg>] power of raider squad 2.5,48
-		"attack": 60.0,  // min power of attack group ---- was 40
+		"raid": [1.0, 6.0],  // raiders leave base almost immediately, no gather wait
+		"attack": 1.5,  // minimal attack gate -- any small group pushes out
 		"thr_mod": {				//AI attacks everything with final threat (after all calculations) <= 1
-			"attack": [0.6, 0.8],  // [<min>, <max>] enemy threat multiplier for target selection of attack task |  values <1 makes enemy group seem less of an thread for ai => ai attacks stronger groups than it own | org=0.25, 0.3
-			"defence": [0.3, 0.5],  // [<min>, <max>] enemy threat modifier for group size calculation of defence task; org=0.95, 0.95 | high values = low risk; low values = high risk 
-			"mobile": 1.0,  // initial modifier for power of attack group based on mobile enemy threat; org=1.05
-			"static": 1.0,  // initial modifier for power of attack group based on static enemy threat; org= 1.2
-			"comm": 0.0001   // make enemy commanders evaluate as the main focus target despite dgun power
+			"attack": [0.15, 0.3],  // enemy groups read as very weak so units never hesitate to engage
+			"defence": [0.95, 0.95],  // high = low risk -- one stray enemy will NOT trigger a defence pull-back of attackers
+			"mobile": 0.4,  // mobile enemy armies look weak -- pushes do not pause for resistance
+			"static": 0.2,   // static defences look near-irrelevant -- units grind into porc instead of patrolling back
+			"comm": 0.0   // make enemy commanders evaluate as a zero-threat focus target despite dgun power
 		},
 		// anti-air threat threshold, air factories will stop production when AA threat exceeds
 		"aa_threat": [[8, 500.0], [24, 500.0]],  // [[<map_start>, <threat_start>], [<map_end>, <threat_end>]]
 		"slack_mod": {
-			"all": 0.5,  // threat map 64-elmos slack multiplier for all units
+			"all": 0.0,   // no safe idle spacing -- units always advance, never hold a patrol line
 			"static": 1.0,  // additional 64-elmo-cells for static units
-			"speed": [0.75, 4.0]  // [<64elmo_cells_speed_mod>, <max_64elmo_cells>]
+			"speed": [0.0, 0.5]  // [<64elmo_cells_speed_mod>, <max_64elmo_cells>]
 		},
-		"num_batch": 3, //repeat unit build if response factory build is called
+		"num_batch": 3, // fewer, larger batches -- groups commit and grind through instead of probing with tiny squads that abort on first contact
 		"anti_cap": 2.0  // probability 0.0~1.0 of AntiCapture action
 	},
 
     // If unit's health drops below specified percent it will retreat
 	"retreat": {
 		"builder": [0.85, 1.0],  // [<default>, <UnitDef modifier>] for all builders
-		"fighter": [0.50, 1.0],  // [<default>, <UnitDef modifier>] for all not-builder units
-		"shield": [0.25, 0.275]  // [<empty>, <full>] shield power
+		"fighter": [0.0, 0.0],  // combat units should not peel off before pushing through
+		"shield": [0.0, 0.0]  // shielded land units should keep pressing instead of recharging safely
 	},
 
 
     // following block is all about defense
 	"defence": {
    		"infl_rad": 5,  // influenece cell radius for defendAlly map
-    	"base_rad": [800.0, 1400.0],  // BASE DEFENDING RADIUS: defend if enemy within clamp(distance(lane_pos, base_pos), 1000, 2000)
+    	"base_rad": [400.0, 700.0],  // tight base-defence ring -- units do not patrol large territory, they keep pushing outward instead
     	"comm_rad": [800.0, 400.0],  // 0 distance from base ~ 1000, base_rad ~ 500.0 => comm_rad is radius within which it checks for enemy. It's largest near base and smaller at the edge of base_rad
-		"escort": [3, 1, 540]  // [<builders_count>, <defenders_count>, <escort rule until this time>]  2,2,360
+		"escort": [0, 0, 180]  // no builder-escort gating -- expansion and offence are not held back waiting for defenders
 	},
     // read of "escort":  [number of builders with defenders, number of defenders for each builder, timeframe were only escorted builders are able to expand (=build mex, porc)]
     // base radius: ai checks if is withing base_rad. if there is enemy it checks if it is withing comm radius which is variable and depend on distance from base
@@ -339,6 +339,10 @@
 				"role": ["static"],
 			 	"power": 1.0
 			},
+			"legfhive": {
+				"role": ["static"],
+				"power": 1.0
+			},
 
 	// T2 Sea Defenses -- Legion
 
@@ -355,9 +359,6 @@
 				"role": ["static"]
 			},
 			"leganavaltorpturret": {
-				"role": ["static"]
-			},
-			"legfhive": {
 				"role": ["static"]
 			},
 
@@ -643,27 +644,31 @@
 			"legcen": {
 				"role": ["assault"],
 				"limit": 40,
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legbal": {
 				"role": ["assault"],
-				"attribute": ["siege"],
 				"retreat": 0.0,
 				"limit": 10,
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"leglob": {
 				"role": ["skirmish"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legkark": {
 				"role": ["riot"],
 				"attribute": ["melee"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"leggob": {
 				"role": ["raider"],
 				"attribute": ["scout"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legaabot": {
@@ -688,20 +693,24 @@
 				"role": ["raider"],
 				"attribute":["melee"],
 				"retreat": 0.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leginc": {
 				"role": ["heavy", "assault"],
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legshot": {
 				"role": ["riot"],
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legbart": {
 				"role": ["artillery"],
 				"retreat": 0.0,
 				"limit": 10,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legdecom": {
@@ -719,18 +728,20 @@
 			},
 			"legsrail": {
 				"role": ["anti_heavy"],
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leghrk": {
 				"role": ["artillery"],
-				"attribute":["siege"],
 				"retreat": 0.0,
 				"limit": 10,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legamph": {
 				"role": ["raider"],
 				"limit": 10,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legadvaabot": {
@@ -763,44 +774,53 @@
 			"leegmech": {
 				"role": ["skirmish"],
 				"retreat": 0.0,
+				"power": 16.0,
 				"fire_state": 2
 			},
 			"legkeres": {
 				"role": ["assault", "heavy"],
 				"retreat": 0.0,
+				"power": 16.0,
 				"fire_state": 2
 			},
 			"legjav": {
 				"role": ["raider"],
+				"power": 16.0,
 				"fire_state": 2
 			},
 			"legerailtank": {
 				"role": ["assault"],
 				"attribute": ["melee"],
+				"power": 16.0,
 				"fire_state": 2
 			},
 			"legeshotgunmech": {
 				"role": ["riot"],
 				"attribute": ["melee"],
+				"power": 16.0,
 				"fire_state": 2
 			},
 			"legeheatraymech": {
 				"role": ["heavy"],
 				"attribute": ["melee"],
 				"retreat": 0.0,
+				"power": 16.0,
 				"fire_state": 2
 			},
 			"legelrpcmech": {
 				"role": ["artillery"],
 				//"attribute": ["siege", "support"],
+				"power": 16.0,
 				"fire_state": 2
 			},
 			"legeallterrainmech": {
 				"role": ["skirmish", "heavy"],
+				"power": 16.0,
 				"fire_state": 2
 			},
 			"legehovertank": {
 				"role": ["raider"],
+				"power": 16.0,
 				"fire_state": 2
 			},
 
@@ -814,28 +834,33 @@
 				"role": ["raider"],
 				"attribute": ["scout"],
 				"limit": 30,
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legamphtank": {
 				"role": ["assault"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"leggat": {
 				"role": ["skirmish"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"leghelios": {
 				"role": ["raider"],
 				"retreat": 0.0,
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legbar": {
 				"role": ["artillery"],
-				"attribute":["siege"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legrail": {
 				"role": ["skirmish"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 	
@@ -843,46 +868,53 @@
 			
 			"legfloat": {
 				"role": ["raider"],
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legaskirmtank": {
 				"role": ["skirmish"],
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legmrv": {
 				"role": ["raider"],
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legaheattank": {
 				"role": ["heavy"],
-				"attribute":["siege"],
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legamcluster": {
 				"role": ["artillery"],
-				"attribute": ["siege"],
 				"retreat": 0.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legavroc": {
 				"role": ["artillery"],
 				"retreat": 0.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legmed": {
 				"role":	["assault"],
 				"retreat": 0.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legvcarry": {
 				"role":	["riot"],
 				"limit": 3,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leginf": {
 				"role": ["artillery"],
 				"retreat": 0.0,
 				"limit": 3,
+				"power": 8.0,
 				"fire_state": 2
 			},
 	
@@ -891,24 +923,24 @@
 			"legcib": {
 				"role": ["super", "air"],
 				"retreat": 0.0,
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legfig": {
 				"role": ["anti_air", "air"],
 				"retreat": 0.0,
-				"power": 0.5,
 				"fire_state": 2
 			},
 			"legkam": {
 				"role": ["bomber", "air"],
-				"power": 0.5,
+				"power": 4.0,
 				"limit": 30,
 				"retreat": 0.0,
 				"fire_state": 2
 			},
 			"legmos": {
 				"role": ["skirmish", "air"],
-				"power": 0.1,
+				"power": 4.0,
 				"retreat": 0.0,
 				"fire_state": 2
 			},
@@ -943,32 +975,37 @@
 			"legphoenix": {
 				"role": ["bomber", "air"],
 				"retreat": 0.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legnap": {
 				"role": ["bomber", "air"],
 				"retreat": 0.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legmineb": {
 				"role": ["bomber", "air"],
 				"retreat": 0.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legstronghold": {
 				"role": ["assault", "air"],
 				"retreat": 0.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"legfort": {
 				"role": ["heavy", "super", "air"],
-				"power": 3.0,
+				"power": 8.0,
 				"retreat": 0.0,
 				"fire_state": 2
 			},
 			"legatorpbomber": {
 				"role": ["anti_sub", "air"],
 				"retreat": 0.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 	
@@ -982,17 +1019,19 @@
 			"legspsurfacegunship": {
 				"role": ["skirmish", "air"],
 				"attribute": ["rare"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legspbomber": {
 				"role": ["bomber", "super", "air"],
-				"power": 3.0,
+				"power": 4.0,
 				"attribute": ["rare"],
 				"fire_state": 2
 			},
 			"legspcarrier": {
 				"role": ["assault", "air"],
 				"attribute": ["rare"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legspfighter": {
@@ -1003,6 +1042,7 @@
 			"legsptorpgunship": {
 				"role": ["anti_sub", "air"],
 				"attribute": ["rare"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 
@@ -1010,39 +1050,36 @@
 
 			"legnavyrezsub": {
 				"role": ["support"],
-				"power": 1.0,
 				"fire_state": 2
 			},
 			"legnavyaaship": {
 				"role": ["anti_air", "raider"],
-				"power": 1.0,
 				"fire_state": 2
 			},
 			"legnavyscout": {
 				"role": ["scout"],
-				"power": 1.0,
 				"fire_state": 2
 			},
 			"legnavyfrigate": {
 				"role": ["assault", "air"],
-				"power": 1.0,
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legnavydestro": {
 				"role": ["skirmish", "air"],
-				"power": 1.0,
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legnavyartyship": {
 				"role": ["artillery"],
 				"attribute": ["support"],
-				"power": 1.0,
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legnavysub": {
 				"role": ["sub"],
 				"attribute": ["rare"],
-				"power": 1.0,
+				"power": 4.0,
 				"fire_state": 2
 			},
 	
@@ -1050,57 +1087,54 @@
 
 			"leganavyantiswarm": {
 				"role": ["riot"],
-				"power": 1.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leganavycruiser": {
 				"role": ["assault"],
-				"power": 1.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leganavymissileship": {
 				"role": ["skirmish"],
-				"power": 1.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leganavybattleship": {
 				"role": ["assault"],
-				"power": 1.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leganavyartyship": {
 				"role": ["artillery"],
-				"power": 1.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leganavyflagship": {
 				"role": ["super"],
-				"power": 1.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leganavyaaship": {
 				"role": ["anti_air"],
-				"power": 1.0,
 				"fire_state": 2
 			},
 			"leganavyantinukecarrier": {
 				"role": ["support"],
-				"power": 1.0,
 				"fire_state": 2
 			},
 			"leganavyradjamship": {
 				"role": ["support"],
-				"power": 1.0,
 				"fire_state": 2
 			},
 			"leganavybattlesub": {
 				"role": ["raider"],
-				"power": 1.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 			"leganavyheavysub": {
 				"role": ["skirmish"],
-				"power": 1.0,
+				"power": 8.0,
 				"fire_state": 2
 			},
 
@@ -1108,15 +1142,18 @@
 	
 			"legsh": {
 				"role": ["raider"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legner": {
 				"role": ["skirmish"],
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legmh": {
 				"role": ["artillery"],
 				"limit": 6,
+				"power": 4.0,
 				"fire_state": 2
 			},
 			"legah": {
@@ -1126,6 +1163,7 @@
 			},
 			"legcar": {
 				"role": ["heavy", "skirmish"],
+				"power": 4.0,
 				"fire_state": 2
 			}
 		}

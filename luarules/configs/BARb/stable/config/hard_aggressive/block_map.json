@@ -132,6 +132,11 @@
 			"ignore": ["mex", "def_low", "engy_high"],
 			"yard": [8, 8]
 		},
+		"superweapon_front": {
+			"type": ["circle", "def_hvy"],
+			"ignore": ["mex", "def_low", "engy_high"],
+			"yard": [8, 8]
+		},
 		"protector": {
 			"type": ["circle", "special"],
 			"ignore": ["mex", "def_low", "engy_mid", "engy_high"]
@@ -183,6 +188,7 @@
 		"def_hvy":  ["armamb", "armanni", "cortoast", "cordoom", "armguard", "corpun", "armkraken", "corfdoom", "legacluster", "legbastion", "legcluster", "legfmg"],
 		"def_air": ["armferret", "armcir", "corrl", "cormadsam", "corerad", "legrhapsis", "leglupara"],
 		"caretaker": ["armnanotc", "cornanotc", "legnanotc", "armnanotcplat", "cornanotcplat", "legnanotcplat"],
+		"superweapon_front": ["armvulc", "corbuzz"],
 		"small": ["armrad", "corrad", "legrad"]
 		
 //engy_low: wind
