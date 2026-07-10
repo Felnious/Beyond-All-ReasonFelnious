@@ -285,4 +285,4 @@ void EnableDefenceFireState()
 	AddAttributeForUnits(units, Unit::Attr::ANTI_STAT.type);
 }
 
-}  // namespace Init
+}  // namespace Init 
